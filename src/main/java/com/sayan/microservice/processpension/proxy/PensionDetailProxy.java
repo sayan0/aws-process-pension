@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sayan.microservice.processpension.model.PensionerDetail;
 
-@FeignClient(name = "pensioner-detail", url = "${PENSIONER_DETAIL_MICROSERVICE_URI:http://localhost:5000}")
+@FeignClient(name = "pensioner-detail", url = "${PENSIONER_DETAIL_MICROSERVICE_URI:http://sayan-lb-774609162.ap-south-1.elb.amazonaws.com}")
 public interface PensionDetailProxy {
 	
 	@GetMapping("/pensioner-detail/PensionerDetailByAadhaar/{aadharno}")
