@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+    - TargetService:
+          Type: AWS::ECS::Service
+          Properties:
+              TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/sayan012-aws-process-pension:1"
+              LoadBalancerInfo:
+                  ContainerName: "sayan012-aws-process-pension"
+                  ContainerPort: 5500
+              PlatformVersion: "LATEST"
